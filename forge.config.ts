@@ -32,6 +32,7 @@ export const publishers = [
   {
     name: "@electron-forge/publisher-github",
     config: {
+      authToken: process.env.GITHUB_TOKEN,
       repository: {
         owner: "j4k0xb",
         name: "bambu-connect-linux",
