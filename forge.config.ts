@@ -37,6 +37,8 @@ export const publishers = [
         owner: "j4k0xb",
         name: "bambu-connect-linux",
       },
+      draft: process.env.PUBLISHER_GITHUB_DRAFT,
+      prerelease: process.env.PUBLISHER_GITHUB_PRERELEASE,
     },
   },
 ];

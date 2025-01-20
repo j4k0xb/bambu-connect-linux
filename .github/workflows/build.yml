@@ -21,5 +21,8 @@ jobs:
         run: ./scripts/download.sh
       - name: Publish
         env:
+          # See 'forge.config.js' GitHub publisher config
+          PUBLISHER_GITHUB_DRAFT: false
+          PUBLISHER_GITHUB_PRERELEASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run publish-app
