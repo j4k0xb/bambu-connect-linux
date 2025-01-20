@@ -37,7 +37,6 @@ export const publishers = [
         owner: "j4k0xb",
         name: "bambu-connect-linux",
       },
-      prerelease: true,
     },
   },
 ];
