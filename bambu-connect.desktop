@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Bambu Connect (Beta)
+Exec=bambu-connect %U
+Icon=bambu-connect
+Type=Application
+Categories=Utility;
+MimeType=x-scheme-handler/bambu-connect;
