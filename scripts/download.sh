@@ -1,13 +1,15 @@
 #!/bin/sh
 
-ASAR_KEY=B0AE6995063C191D2B404637FBC193AE10DAB86A6BC1B1DE67B5AEE6E03018A2
+echo Downloading bambu-connect.dmg...
+curl -s "https://public-cdn.bblmw.com/upgrade/bambu-connect/v1.1.3/bambu-connect-beta-darwin-arm64-v1.1.3_2c73d82.dmg" -o bambu-connect.dmg
 
-curl -s "https://public-cdn.bblmw.com/upgrade/bambu-connect/bambu-connect-beta-darwin-arm64-v1.0.4_4bb9cf0.dmg" -o bambu-connect.dmg
+echo Extracting dmg...
+rm -rf "Bambu Connect (Beta)"
 7z x bambu-connect.dmg
-npx asarfix "Bambu Connect (Beta)/Bambu Connect (Beta).app/Contents/Resources/app.asar" -k "$ASAR_KEY" -o fixed.asar
-npx asar extract fixed.asar src
 
-rm src/package.json src/icon.icns
+echo Extracting asar...
+rm -rf src
+npx asar extract "Bambu Connect (Beta)/Bambu Connect (Beta).app/Contents/Resources/app.asar" src
+rm -rf "Bambu Connect (Beta)"
 
-# asarmor wraps the code in an exported function and calls it from the native code
-echo "module.exports();" >> src/.vite/build/main.js
+rm src/package.json
