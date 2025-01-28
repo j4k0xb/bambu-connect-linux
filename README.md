@@ -1,4 +1,4 @@
-# Bambu Lab Connect for Linux
+# Bambu Connect for Linux
 
 This repo extracts the MacOs version of [Bambu Connect](https://wiki.bambulab.com/en/software/bambu-connect) and repackages it for Linux as an AppImage.
 
