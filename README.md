@@ -14,3 +14,6 @@ For debugging:
 ```sh
 npm start -- --inspect-electron
 ```
+
+> [!TIP]
+> Consider using [webcrack](https://github.com/j4k0xb/webcrack) to make the minified code more readable.
