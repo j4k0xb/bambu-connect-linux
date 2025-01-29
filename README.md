@@ -6,6 +6,7 @@ You can download it from the [Releases](https://github.com/j4k0xb/bambu-connect-
 
 ```sh
 ./scripts/download.sh
+npm install
 npm run make
 ```
 
